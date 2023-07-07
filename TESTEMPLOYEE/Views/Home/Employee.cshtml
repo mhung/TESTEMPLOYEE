@@ -1,0 +1,25 @@
+﻿@model List<Employee>
+
+<table class="table" id="tbl-contractor">
+    <thead>
+    <tr>
+        <td>EmployeeId</td>
+        <td>SSN</td>
+        <td>Hire Date</td>
+    </tr>
+    </thead>
+    <tbody>
+        @{
+
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.EmployeeId</td>
+                    <td><span>@item.SSN</span></td>
+                    <td>@item.HireDate</td>
+
+                </tr>
+            }
+        }
+    </tbody>
+</table>

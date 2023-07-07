@@ -1,0 +1,29 @@
+﻿@model List<Contractor>
+
+<table class="table" id="tbl-contractor">
+    <thead>
+    <tr>
+        <td>Action</td>
+        <td>Hourly Rate</td>
+        <td>Contractor State</td>
+    </tr>
+    </thead>
+    <tbody>
+        @{
+
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink("Edit", "EditContractor", new { id = item.ContractorId }) 
+                     </td>
+                    <td><span>@item.HourRate</span></td>
+                    <td>
+                       <span>@item.ContractorState</span>
+                    </td>
+
+                </tr>
+            }
+        }
+    </tbody>
+</table>
